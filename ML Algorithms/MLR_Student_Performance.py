@@ -25,5 +25,5 @@ model.fit(X_train, y_train)
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
-print(f'Training Score: {train_score}')
-print(f'Test Score: {test_score}')
+print(f'Training Score: {train_score*100}')
+print(f'Test Score: {test_score*100}')

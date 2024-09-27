@@ -39,5 +39,5 @@ regressor.fit(X_train, y_train)
 
 y_pred = regressor.predict(X_test)
 
-print('Train Score: ', regressor.score(X_train, y_train))
-print('Test Score: ', regressor.score(X_test, y_test))
+print('Train Score: ', regressor.score(X_train, y_train)*100)
+print('Test Score: ', regressor.score(X_test, y_test)*100)

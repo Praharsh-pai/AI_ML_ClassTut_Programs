@@ -28,5 +28,5 @@ y_test_pred = regressor.predict(X_test)
 train_score = r2_score(y_train, y_train_pred)
 test_score = r2_score(y_test, y_test_pred)
 
-print(f"Training R-squared score: {train_score}")
-print(f"Test R-squared score: {test_score}")
+print(f"Training R-squared score: {train_score*100}")
+print(f"Test R-squared score: {test_score*100}")
