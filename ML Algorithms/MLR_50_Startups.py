@@ -8,13 +8,13 @@ from sklearn.linear_model import LinearRegression # type: ignore
 
 data_set = pd.read_csv('50_Startups.csv')
 print("First few rows of the dataset:")
-print(data_set.head(10))
+print(data_set.head())
 
 X = data_set.iloc[:, :-1].values
 y = data_set.iloc[:, 4].values
 
-print('data X: \n',X)
-print('data Y: \n',y)
+# print('data X: \n',X)
+# print('data Y: \n',y)
 
 labelencoder_X = LabelEncoder()
 X[:, 3] = labelencoder_X.fit_transform(X[:, 3])
@@ -27,12 +27,12 @@ column_transformer = ColumnTransformer(
 )
 
 X = column_transformer.fit_transform(X)
-print('Catgorical Data: \n',X)
+# print('Catgorical Data: \n',X)
 
 X = X.astype(int)
 y = y.astype(int)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
