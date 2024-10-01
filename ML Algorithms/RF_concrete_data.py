@@ -2,19 +2,19 @@
 import pandas as pd # type: ignore
 from sklearn.model_selection import train_test_split # type: ignore
 from sklearn.ensemble import RandomForestRegressor # type: ignore
-from sklearn.preprocessing import LabelEncoder # type: ignore
+# from sklearn.preprocessing import LabelEncoder # type: ignore
 from sklearn.metrics import r2_score # type: ignore
 
-file_path = '50_Startups.csv'
+file_path = 'concrete_data.csv'
 data = pd.read_csv(file_path)
 print("First few rows of the dataset:")
 print(data.head())
 
-labelencoder = LabelEncoder()
-data['State'] = labelencoder.fit_transform(data['State'])
+# labelencoder = LabelEncoder()
+# data['State'] = labelencoder.fit_transform(data['State'])
 
-X = data.drop(columns=['Profit']) # Features
-y = data['Profit'] # Target
+X = data.drop(columns=['Strength']) # Features
+y = data['Strength'] # Target
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
