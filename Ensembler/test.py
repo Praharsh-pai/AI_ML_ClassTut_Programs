@@ -21,7 +21,7 @@ data_set['Profit_Class'] = pd.cut(data_set['Profit'], bins=3, labels=['Low', 'Me
 X = data_set.drop(['Profit', 'Profit_Class'], axis=1)
 y = data_set['Profit_Class']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=30)
 
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
