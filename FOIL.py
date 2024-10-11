@@ -54,5 +54,5 @@ for rule in learned_rules:
     print(rule)
 
 print(f"Is John a grandparent of Jake? {grandparent('John', 'Jake')}")
-print(f"Is Alice a grandparent of John? {grandparent('Alice', 'John')}")
+print(f"Is Alice a grandparent of Lucy? {grandparent('Alice', 'John')}")
 print(f"Is Mary a grandparent of Lucy? {grandparent('Mary', 'Lucy')}")

@@ -1,13 +1,13 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-from tensorflow.keras.datasets import mnist
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.preprocessing import image
+import numpy as np # type: ignore
+import matplotlib.pyplot as plt # type: ignore
+from sklearn.model_selection import train_test_split # type: ignore
+from sklearn.metrics import classification_report # type: ignore
+from tensorflow.keras.datasets import mnist # type: ignore
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Dense, Dropout # type: ignore
+from tensorflow.keras.optimizers import Adam # type: ignore
+from tensorflow.keras.utils import to_categorical # type: ignore
+from tensorflow.keras.preprocessing import image # type: ignore
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 X_train = X_train.reshape(X_train.shape[0], -1) / 255.0
