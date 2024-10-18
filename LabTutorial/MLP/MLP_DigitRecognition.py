@@ -40,6 +40,6 @@ def predict_user_image(mlp, img_path):
     plt.show()
     return prediction[0]
 
-img_path = './DigitRecognition/images/4b.jpg'
+img_path = './images/4b.jpg'
 predicted_digit = predict_user_image(mlp, img_path)
 print(f"The MLP model predicted: {predicted_digit}")
